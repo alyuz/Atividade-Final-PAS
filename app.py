@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request, redirect, url_for
-from controllers.monitoramento_controller import MonitoramentoController
+from controller.controller import MonitoramentoController
 
 app = Flask(__name__)
 controller = MonitoramentoController()

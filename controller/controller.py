@@ -1,4 +1,4 @@
-from services.monitoramento_service import MonitoramentoService
+from services.service import MonitoramentoService
 
 class MonitoramentoController:
     def __init__(self):

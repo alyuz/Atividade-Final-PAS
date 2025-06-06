@@ -1,4 +1,4 @@
-from controllers.monitoramento_controller import MonitoramentoController
+from controller.controller import MonitoramentoController
 
 def menu():
     print("\nMenu Monitoramento Sustentabilidade")

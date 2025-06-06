@@ -1,5 +1,5 @@
-from repositories.monitoramento_repositorio import MonitoramentoRepositorio
-from utils.criptografia import criptografia, descriptografia
+from repositories.repository import MonitoramentoRepositorio
+from cripto.cryptography import criptografia, descriptografia
 
 class MonitoramentoService:
     def __init__(self):
