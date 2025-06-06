@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <title>Inserir Registro - Sustentabilidade</title>
+</head>
+<body>
+    <h1>Inserir Novo Registro</h1>
+    <form action="{{ url_for('inserir') }}" method="post">
+        <label>Data (YYYY-MM-DD): <input type="date" name="data" required></label><br>
+        <label>Litros de água: <input type="number" step="0.01" name="litros" required></label><br>
+        <label>Energia (kWh): <input type="number" step="0.01" name="energia" required></label><br>
+        <label>Resíduos gerados (kg): <input type="number" name="residuos" required></label><br>
+        <label>Resíduos reciclados (kg): <input type="number" name="reciclados" required></label><br>
+
+        <p>Transporte (marque as opções):</p>
+        <label><input type="checkbox" name="opc1" value="S"> Transporte público</label><br>
+        <label><input type="checkbox" name="opc2" value="S"> Bicicleta</label><br>
+        <label><input type="checkbox" name="opc3" value="S"> Caminhada</label><br>
+        <label><input type="checkbox" name="opc4" value="S"> Carro (fósseis)</label><br>
+        <label><input type="checkbox" name="opc5" value="S"> Carro elétrico</label><br>
+        <label><input type="checkbox" name="opc6" value="S"> Carona compartilhada (fósseis)</label><br>
+
+        <button type="submit">Inserir</button>
+    </form>
+    <a href="{{ url_for('index') }}">Voltar</a>
+</body>
+</html>
