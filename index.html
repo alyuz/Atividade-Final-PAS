@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <title>Monitoramento Sustentabilidade</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <h1>Registros de Sustentabilidade</h1>
+    <a href="{{ url_for('inserir') }}">Inserir Novo Registro</a>
+    <table border="1" cellpadding="5" cellspacing="0">
+        <thead>
+            <tr>
+                <th>Data</th>
+                <th>Água (Litros)</th>
+                <th>Classificação Água</th>
+                <th>Energia (kWh)</th>
+                <th>Classificação Energia</th>
+                <th>Resíduos (kg)</th>
+                <th>Recicláveis (kg)</th>
+                <th>Classificação Resíduos</th>
+                <th>Transporte</th>
+                <th>Classificação Transporte</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for r in registros %}
+            <tr>
+                <td>{{ r.data }}</td>
+                <td>{{ r.valor_agua }}</td>
+                <td>{{ r.consumo_agua }}</td>
+                <td>{{ r.valor_energia }}</td>
+                <td>{{ r.consumo_energia }}</td>
+                <td>{{ r.valor_residuos }}</td>
+                <td>{{ r.valor_reciclaveis }}</td>
+                <td>{{ r.geracao_residuos }}</td>
+                <td>{{ r.valor_transporte }}</td>
+                <td>{{ r.uso_transporte }}</td>
+                <td>
+                    <a href="{{ url_for('excluir', data=r.data) }}" onclick="return confirm('Excluir este registro?')">Excluir</a>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
