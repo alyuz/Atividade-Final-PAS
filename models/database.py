@@ -14,7 +14,7 @@ class DatabaseConnection:
                 cls._instance = super().__new__(cls)
                 cls._instance.connection = mysql.connector.connect(
                     host='localhost',
-                    database='sustentabilidade',
+                    database='bd_projetoti',
                     user='root',
                     password=''
                 )
