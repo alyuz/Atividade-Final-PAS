@@ -10,7 +10,7 @@ class DatabaseConnection:
                 cls._instance = mysql.connector.connect(
                     host="localhost",
                     user="root",
-                    password="#",
+                    password="",
                     database="bd_projetoti",
                     # auth_plugin='mysql_native_password'
                 )
